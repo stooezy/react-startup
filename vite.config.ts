@@ -21,7 +21,7 @@ export default defineConfig({
         /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
         /\.md$/, // .md
       ],
-      imports: ['react', 'react-router-dom', 'ahooks'],
+      imports: ['react', 'react-router-dom', 'ahooks', 'recoil'],
       dts: './src/auto-imports.d.ts',
       dirs: [],
       eslintrc: {

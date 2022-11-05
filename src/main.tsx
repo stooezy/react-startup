@@ -1,6 +1,8 @@
-import { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
+
 // eslint-disable-next-line import/no-unresolved
 import routes from '~react-pages';
 
@@ -11,7 +13,11 @@ const App = () => {
 };
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <Router>
-    <App />
-  </Router>,
+  <React.StrictMode>
+    <RecoilRoot>
+      <Router>
+        <App />
+      </Router>
+    </RecoilRoot>
+  </React.StrictMode>,
 );
